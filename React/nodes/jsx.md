@@ -139,4 +139,70 @@ Cabe destacar que usamos `{ }` para conectar las funciones JS a un evento.
 
 * Los eventos en React se activan en la fase de _bubbling_. Para activar un evento en la fase de captura, hay que añadir la palabra _Capture_ al nombre del evento (por ejemplo, `onClick` se convertirá en `onClickCapture`).
 * No todos los eventos DOM son proporcionados por React. Pero se puede hacer uso de ellos utilizando los métodos de ciclo de vida de React.
-* 
+* El contexto de los eventos cambia por lo que es normal tener que hacer `bind` de la función.
+
+### Expresiones
+
+Pues que a estas alturas ya deberíamos tener claro que JSX es _azucar sintáctico_ que se acaba convirtiendo en JS, la pregunta es, qué pasa si queremos intercalar JS en JSX.
+
+Para ello debermos hacer uso de `{ }` que nos permitirá hacer uso de
+
+* expresiones y condiciones
+* referencias a otros elementos JS que esten en el _scope_
+* comentarios 
+
+```js
+const label = '2 + 2';
+const inputType = 'input';
+const reactNode = <label>{label} = <input type={inputType} value={2+2} /></label>;
+ReactDOM.render(reactNode, document.getElementById('app'));
+```
+
+Se transforma en 
+
+```js
+var label = '2 + 2';
+var inputType = 'input';
+var reactNode = React.createElement(
+  'label',
+  null,
+  label,
+  ' = ',
+  React.createElement('input', { type: inputType, value: 2 + 2 })
+);
+ReactDOM.render(reactNode, document.getElementById('app'));
+```
+
+### Comentarios
+
+**Usaremos siempre la combinacion /\* comentario \*/ **
+
+Por ejemplo
+```js
+const reactNode = <div /*commentado*/>
+  {/* usar {'{}'} aquí para comentar */}
+ </div>;
+```
+
+De no haber usado `{ }` para escapar los comentarios, el resultado podría haber sido 
+
+```js
+var reactNode = React.createElement(
+  "div",
+  null,
+  "/* usar ",
+  "{}",
+  " aquí para comentar */"
+);
+```
+
+Lo cual nos podría haber llevado a la creación de nodos no deseados
+```html
+<div data-reactid=".0">
+    <span data-reactid=".0.0">/* usar </span>
+    <span data-reactid=".0.1">{}</span>
+    <span data-reactid=".0.2"> aquí para comentar */</span>
+</div>
+```
+
+
