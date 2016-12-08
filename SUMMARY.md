@@ -1,6 +1,16 @@
 # Summary
 
 * [0.0 - Curso](README.md)
+* [1.0 - ES6](es/README.md)
+  * [1.1 - Variables](es/variables.md)
+  * [1.2 - Objectos](es/objetos.md)
+  * [1.3 - Funciones](es/funciones.md)
+  * [1.4 - Promesas](es/promesas.md)
+  * [1.5 - Módulos](es/modulos.md)
+  * [1.6 - Clases](es/clases.md)
+  * [1.7 - Cadenas](es/cadenas.md)
+  * [1.8 - Generadores](es/generadores.md)
+  * [1.9 - Colleciones](es/colecciones.md) 
 * [2.0 - Herramientas](react/herramientas.md)
 * [2.1 - Introducción a React](react/introduccion.md)
 * [2.2 - Nodos en React](react/nodos/README.md)
