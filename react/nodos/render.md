@@ -10,12 +10,23 @@ var HTMLCustom = React.createElement('foo-bar', {className:'bar'}, 'foo');
 ReactDOM.render(HTMLLi, document.getElementById('existente'));
 ReactDOM.render(HTMLCustom, document.getElementById('custom'));
 ```
-
+```html
+<body>
+    <div id="existente"></div>
+    <div id="custom"></div>
+</body>
+```
 El resultado sería
 
 ```html
 <body>
-    <div id="existente"><li class="bar" data-reactid=".0">foo</li></div>
-    <div id="custom"><foo-bar classname="bar" children="foo" data-reactid=".1">foo</foo-bar></div>
+    <div id="existente">
+      <li class="bar" data-reactid=".0">foo</li>
+    </div>
+    <div id="custom">
+      <foo-bar classname="bar" children="foo" data-reactid=".1">
+        foo
+      </foo-bar>
+    </div>
 </body>
 ```
