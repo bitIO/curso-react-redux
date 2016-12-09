@@ -205,4 +205,4 @@ Lo cual nos podría haber llevado a la creación de nodos no deseados
 </div>
 ```
 
-
+Por defecto, React DOM escapa a cualquier valor incrustado en JSX antes de renderizarlos. Por lo tanto, asegura que nunca se puede inyectar nada que no esté explícitamente escrito en su aplicación. Todo se convierte en una cadena antes de ser renderizado. Esto ayuda a evitar ataques XSS (cross-site-scripting).

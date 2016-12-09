@@ -1,0 +1,27 @@
+# Instalación
+
+Podemos instalar React de diferentes maneras. Para añadir react a un proyecto existente usaremos _npm_ (o _yarn_ que es un nuevo gestor de paquetes creado por facebook que resuelve **sus** problemas y que se está poniendo muy de moda - ya sabéis, en el front nos gusta mucho esto de cambiar de herramientas cada seis meses 😰).
+
+```
+yarn add react react-dom
+npm install --save react react-dom
+```
+
+Para usarlo de esta manera, si vamos a hacer uso de JSX (que lo vamos a hacer), es necesario que usemos Babel. Tenemos que asegurarnos de instalar `babel-preset-react` y `babel-preset-es2015` y habilitarlos en el fichero de configuración `.babelrc`.
+
+```
+npm install --save-dev babel-cli babel-preset-react
+echo '{ "presets": ["react"] }' > .babelrc
+```
+
+Otra opción es usar `create-react-app` que nos permite crear proyectos con react, babel y webpack ya configurado
+
+```
+npm install -g create-react-app
+create-react-app hello-world
+cd hello-world
+npm start
+```
+
+Esto nos ejecuta el entorno de desarrollo. Para ejecutar el entorno de _producción_ debemos ejecutar _npm run build_ (si hemos usado `create-react-app`) que nos creará el paquete de _producción_.
+
