@@ -1,6 +1,6 @@
 # Middleware
 
-El middleware Redux no es más que una función que se invoca después de que se envía una acción, pero antes de que un reductor se encargue de la acción. Puede modificar la acción original o, incluso cancelarla. La gente utiliza el middleware para logging, informes de fallos, conversación con una API asíncrona, enrutamiento y más. Es algo similar a la programación de aspecto.
+El middleware Redux no es más que una función que se invoca después de que se envía una acción, pero antes de que un reductor se encargue de la acción. Puede modificar la acción original, esperar a que se termine alguna otra acción o, incluso cancelarla. La gente utiliza el middleware para logging, informes de fallos, conversación con una API asíncrona, enrutamiento y más. Es algo similar a la programación de aspecto.
 
 ## Cómo funciona
 
