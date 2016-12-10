@@ -41,3 +41,7 @@ A partir de ahora, tendremos dos tipos de componentes, los componetes de represe
   </tr>
 <tbody>
 </table>
+
+### Componentes de presentación
+
+Describen la apariencia pero no saben de dónde vienen los datos, ni cómo cambiarlos. Si migra de Redux a otra cosa, podrá mantener todos estos componentes exactamente iguales. No tienen dependencia de Redux.
