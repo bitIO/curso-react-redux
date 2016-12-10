@@ -43,3 +43,63 @@ class App extends React.Component {
 
 export default App;
 ```
+
+### Modificar dispatch usando _thunk_
+
+El middleware _redux-thunk_ nos permite escribir creadores de acciones que devuelven una función en lugar de una acción. El _thunk_ se puede utilizar para retrasar el envío de una acción, o para enviar sólo si se cumple una cierta condición. La función interna recibe los métodos de almacén dispatch y getState como parámetros.
+
+```js
+store.dispatch((dispatch) => {
+  dispatch({ type: 'POSTS_FETCH_START' });
+  axios
+    .get('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => {
+      dispatch({ type: 'POSTS_FETCH_FINISHED', payload: response.data });
+    })
+    .catch((error) => {
+      dispatch({ type: 'POSTS_FETCH_FAILED', payload: error });
+    });
+});
+```
+
+### Modificar el reducer
+
+Puesto que ahora tenemos estados dinámicos, necesitamos inicilizar el estado, ya no puede ser un objeto vacio.
+
+```js
+const initialState = {
+  fetching: false,
+  fetched: false,
+  posts: [],
+  error: null,
+};
+```
+
+Y modificaremos el reducer para que atienda las nuevas acciones
+
+```js
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'POSTS_FETCH_START':
+      return {
+        ...state,
+        fetching: true,
+      };
+    case 'POSTS_FETCH_FINISHED':
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        posts: action.payload,
+      };
+    case 'POSTS_FETCH_FAILED':
+      return {
+        ...state,
+        fetching: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+```
