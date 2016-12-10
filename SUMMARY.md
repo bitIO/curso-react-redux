@@ -1,8 +1,8 @@
 # Summary
 
-* [Curso](README.md)
-* [ES6](es6/README.md)
-  * [2.1 - Variables](es6/variables.md)
+* [0.0 - Curso](README.md)
+* [1.0 - ES6](es6/README.md)
+  * [1.1 - Variables](es6/variables.md)
   * [1.2 - Objectos](es6/objetos.md)
   * [1.3 - Funciones](es6/funciones.md)
   * [1.4 - Promesas](es6/promesas.md)
