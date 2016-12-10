@@ -103,3 +103,5 @@ const reducer = (state = initialState, action) => {
   }
 };
 ```
+
+**Ejercicio:** Cambiar `redux-thunk` por `redux-promise-middleware`
