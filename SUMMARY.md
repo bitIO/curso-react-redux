@@ -34,4 +34,4 @@
   * [3.1 - Flux, los origenes](redux/flux.md)
   * [3.2 - Introducción](redux/introduccion.md)
   * [3.3 - Los componentes](redux/partes.md)
-
+  * [3.4 - Flujo](redux/flujo.md)
