@@ -35,6 +35,5 @@
   * [3.2 - Introducción](redux/introduccion.md)
   * [3.3 - Los componentes](redux/partes.md)
   * [3.4 - Flujo](redux/flujo.md)
-  * [3.5 - Acciones asíncronas](redux/acciones-asincronas.md)
-  * [3.6 - Middleware](redux/middleware.md)
-  * [3.6 - Middleware](redux/middleware.md)
+  * [3.5 - Middleware](redux/middleware.md)
+  * [3.6 - Acciones asíncronas](redux/acciones-asincronas.md)
