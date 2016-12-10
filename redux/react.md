@@ -119,3 +119,27 @@ const VisibleTodoList = connect(
 export default VisibleTodoList
 ```
 
+### Conectar con el Store
+
+Todos los componentes contenedor necesitan acceso al store de Redux para que puedan suscribirse. Una opción sería pasarlo como un propiedad a cada componente contenedor. Pfff 😰 eso seria, como poco tedioso.
+
+La opción que recomendamos es utilizar un componente de `react-redux` especial denominado `<Provider>` para que el store esté disponible _**de forma mágica**_ para todos los componentes contenedor en la aplicación sin pasarlo explícitamente. Sólo es necesario utilizarlo una vez al renderizar el componente raíz:
+
+```js
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from './reducers'
+import App from './components/App'
+
+let store = createStore(todoApp)
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
+
+```
