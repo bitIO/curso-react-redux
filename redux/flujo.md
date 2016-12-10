@@ -52,3 +52,9 @@ return {
 ```
 
 `combineReducers()` es una utilidad, no es obligatorio usarla; Puedes escribir tu propio reductor de raíz! ( o buscar otro por ahí)
+
+**4º - El store guarda el árbol de estado completo devuelto por el reductor raíz.**
+
+Ahora se invocará a cada _listener_ registrado con `store.subscribe()` y los _listeners_ pueden llamar a `store.getState()` para obtener el estado actual.
+
+Por fin, la interfaz de usuario puede actualizarse para reflejar el nuevo estado.
