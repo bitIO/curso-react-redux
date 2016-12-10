@@ -37,5 +37,58 @@ Y la última, la más interna, recibe el objeto de la acción como parámetro.
 
 ## Veamos un ejemplo 
 
+```js
+const myReducer = (state = 0, action) => {
+  switch(action.type) {
+    case 'SUMAR':
+      return state + 1;
+    case 'RESTAR':
+      return state - 1;
+    /* step 3  
+    case 'ERROR':
+    	throw new Error('Error misterioso');
+    */
+    default:
+      return state;
+  }
+}
+
+const logger = store => next => action => {
+	console.log("se ha disparado una acción", action);
+  // step 1
+  // action.type = 'RESTAR';
+  // step 0
+  // next(action);
+};
+
+/* step 3
+const errorHandler = store => next => action => {
+	try {
+	  next(action);
+  } catch (e) {
+  	console.error('El horrror! Algo ha fallado', e);
+  }
+};
+*/
+
+const middleware = Redux.applyMiddleware(logger);
+// step 3 (comment previous line)
+// const middleware = Redux.applyMiddleware(logger, errorHandler);
+
+const store = Redux.createStore(myReducer, 1, middleware);
+
+store.subscribe(() => {
+	console.log("El estado de la app ha cambiado", store.getState());
+});
+
+store.dispatch({ type: 'SUMAR' });
+store.dispatch({ type: 'SUMAR' });
+store.dispatch({ type: 'SUMAR' });
+store.dispatch({ type: 'RESTAR' });
+// step 3
+// store.dispatch({ type: 'ERROR' });
+```
+
+https://jsfiddle.net/seat7Lvc/
 
 
