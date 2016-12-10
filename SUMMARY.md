@@ -33,4 +33,5 @@
 * [3.0 - Redux](redux/README.md)
   * [3.1 - Flux, los origenes](redux/flux.md)
   * [3.2 - Introducción](redux/introduccion.md)
+  * [3.3 - Las componentes](redux/partes.md)
 
