@@ -37,3 +37,6 @@
   * [3.4 - Flujo](redux/flujo.md)
   * [3.5 - Middleware](redux/middleware.md)
   * [3.6 - Acciones asíncronas](redux/acciones-asincronas.md)
+  * [3.7 - React](redux/react.md)
+
+
