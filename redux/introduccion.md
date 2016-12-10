@@ -31,10 +31,12 @@ Siempre que pasásemos como tipo de acción uno que no atañe al reducer, devolv
 ```js
 const myReducer = (state, action) => {
   switch(action.type) {
-    case 'sumar':
-      return state + 1;
-    case 'restar':
-      return state - 1;
+    case 'hazAlgo':
+      // lógica que lo que tengamos que hacer
+      return {
+        proiedad: nuevoValor,
+        ... state
+      }
     default:
       return state;
   }
