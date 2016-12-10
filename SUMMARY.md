@@ -10,7 +10,8 @@
   * [1.6 - Clases](es6/clases.md)
   * [1.7 - Cadenas](es6/cadenas.md)
   * [1.8 - Generadores](es6/generadores.md)
-  * [1.9 - Colecciones](es6/colecciones.md) 
+  * [1.9 - Colecciones](es6/colecciones.md)
+  * [1.10 - Ejercicios](es6/ejercicios.md) 
 * [2.0 - React](react/README.md)
   * [2.1 - Herramientas](react/herramientas.md)
   * [2.2 - Instalación](react/instalacion.md)
@@ -27,6 +28,9 @@
   * [2.10 - Componetes controlados y no controlados](react/forms.md)
   * [2.11 - JSX, comprobación de tipos y contexto](react/jsx.md)
   * [2.12 - Rendimiento](react/rendimiento.md)
+  * [2.13 - ¡¡¡ Examen !!! 🤔](react/questionario.md)
+
+
 
 
 
