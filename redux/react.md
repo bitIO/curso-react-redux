@@ -74,3 +74,9 @@ export default Todo
 Técnicamente, un componente de contenedor es sólo un componente React que utiliza `store.subscribe()` para leer una parte del árbol de estado Redux y suministrar _props_ a un componente de presentación que lo procesa. Se puede escribir un componente de contenedor manualmente, pero Redux sugiere generar componentes de contenedor con la función `connect()` de la biblioteca `react-redux` que proporciona muchas optimizaciones útiles para evitar re-renders innecesarios.
 
 Para usar `connect()`, debe definir una función especial llamada `mapStateToProps` que indique cómo transformar el estado de _store_ Redux actual en parte de las _props_ que desea transferir a un componente de presentación.
+
+Además de leer el estado, los componentes contenedor pueden enviar acciones. De manera similar a `mapStateToProps`, se puede definir una función llamada `mapDispatchToProps()` que recibe el método `dispatch()` y devuelve los props con callbacks que queremos inyectar en el componente de presentación.
+
+
+```js
+```
