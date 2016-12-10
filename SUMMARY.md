@@ -29,6 +29,7 @@
   * [2.11 - JSX, comprobación de tipos y contexto](react/jsx.md)
   * [2.12 - Rendimiento](react/rendimiento.md)
   * [2.13 - ¡¡¡ Examen !!! 🤔](react/questionario.md)
+  * [2.14 - Ejercicios](react/ejercicios.md)
 
 
 
