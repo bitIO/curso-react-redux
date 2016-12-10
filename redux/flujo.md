@@ -51,4 +51,4 @@ return {
 
 ```
 
-`combineReducers()` es una utilidad, no es obligatorio usarla; Puedes escribir tu propio reductor de raíz!
+`combineReducers()` es una utilidad, no es obligatorio usarla; Puedes escribir tu propio reductor de raíz! ( o buscar otro por ahí)
