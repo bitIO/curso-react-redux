@@ -25,25 +25,19 @@ A partir de ahora, tendremos dos tipos de componentes, los componetes de represe
     <td>Cómo funcionan las cosas (búsqueda de datos, actualizaciones de estado)</td>
   </tr>
   <tr>
-   <td></td>
-   <td></td>
-   <td></td>
+   <td>Consciente de Redux</td>
+   <td>No</td>
+   <td>Sí</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Lectura de datos</td>
+    <td>Lee de props</td>
+    <td>Se suscribe al estado Redux</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Modificar datos</td>
+    <td>Callbacks en props</td>
+    <td>Dispatch acciones Redux</td>
   </tr>
 <tbody>
 </table>
-
-
-|  | |  |
-|Consciente de Redux| No | Sí |
-| Lectura de datos | Lee de props | Se suscribe al estado Redux |
-| Modificar datos | Callbacks en props | Dispatch acciones Redux |
