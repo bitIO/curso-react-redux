@@ -7,6 +7,16 @@ React es una herramienta de JavaScript que facilita la razonamiento, la construc
 
 Que es una librería que nos permite crear interfaces de usuarios basada en componentes.
 
+## Principios de React
+
+React se basa en un *statement* que, inicialmente, causa controversia
+
+> Re-renderizar todo con cada actualización
+
+Esto, a pesar de sonar *caro* en términos de computación no lo es ya que la frase, tampoco es del todo *cierta*. 
+
+React usa una representación virtual del arbol DOM, llamada virtual DOM, que es un descripción ligera de todos los componentes del UI. Con cada actualización, React actualiza todo el árbol aplicando sólo los cambios necesarios con un algoritmo de comparación muy eficiente que, finalmente, resulta en cambios mínimos en el DOM real con lo que se producen menos *re-flows*.
+
 ## ¿Qué es un componente React?
 
 Los componentes son pequeños elementos de interfaz de usuario que muestran los datos a medida que cambia con el tiempo. Entonces estos componentes se componen juntos, anidados dentro de otros para crear interfaces de usuario enteras. Los sitios web o web apps pueden utilizar React para todas sus interfaces de usuario o sólo fragmentos de ella.

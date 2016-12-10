@@ -49,3 +49,8 @@ Sin embargo, se utilizan por diferentes razones y de diferentes maneras.
 
 > Un patrón común es crear varios componentes *stateless* que sólo representan datos y tener un componente con estado por encima de ellos en la jerarquía que pasa su estado a sus hijos a través de las *props*. El componente con estado encapsula toda la lógica de interacción, mientras que los componentes *stateless* se encarga de renderizar los datos de forma declarativa
 
+## Usar el estado de manera correcta
+
+Debe haber una sola "fuente de verdad" para cualquier dato que cambie en una aplicación React. Normalmente, el estado se agrega primero al componente que lo necesita para renderizar. Entonces, si otros componentes también lo necesitan, podemos *elevarlo* al ancestro común más cercano. En lugar de intentar sincronizar el estado entre los diferentes componentes, debe recoradr que en React, los datos fluyen de arriba hacia abajo.
+
+Llevar el estado a un ancestro común implica la escritura de más código *boilerplate*  pero como beneficio, necesitaremos menos trabajo para encontrar y aislar errores. Puesto que cualquier estado "vive" en algún componente y sólo ese componente  puede cambiarlo, el aread de errores se reduce considerablemente.

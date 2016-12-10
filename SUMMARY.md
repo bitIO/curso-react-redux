@@ -10,7 +10,7 @@
   * [1.6 - Clases](es6/clases.md)
   * [1.7 - Cadenas](es6/cadenas.md)
   * [1.8 - Generadores](es6/generadores.md)
-  * [1.9 - Colleciones](es6/colecciones.md) 
+  * [1.9 - Colecciones](es6/colecciones.md) 
 * [2.0 - React](react/README.md)
   * [2.1 - Herramientas](react/herramientas.md)
   * [2.2 - Instalación](react/instalacion.md)
@@ -23,6 +23,10 @@
   * [2.6 - Propiedades](react/propiedades.md)
   * [2.7 - Estado](react/estado.md)
   * [2.8 - Ciclo de vida](react/ciclo-de-vida.md)
+  * [2.9 - Eventos](react/eventos.md)
+  * [2.10 - Componetes controlados y no controlados](react/forms.md)
+  * [2.11 - JSX, comprobación de tipos y contexto](react/jsx.md)
+  * [2.12 - Rendimiento](react/rendimiento.md)
 
 
 
