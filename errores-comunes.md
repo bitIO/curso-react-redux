@@ -31,3 +31,9 @@ En antiguas versiones esto se permitia, ahora tenemos que pasar un string
 ```js
 <p>{{ color:blue, highlight: true }}</p>
 ```
+
+#### Fetch data en el router no el `componentWillMount`
+
+Habitualmente hacemos el _fecth_ de los datos cuando sabemos que el compoente se va a inicializar. ¿Qué pasa si se instancia ese componente 5 veces?
+
+Para evitar este tipo de situaciones, podemos usar el hook [onEnter de react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteConfiguration.md#enter-and-leave-hooks) para hacer el dispatch aquí
