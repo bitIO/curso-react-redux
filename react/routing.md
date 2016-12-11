@@ -73,6 +73,55 @@ const NotFound = () => (
 <Route path='*' component={NotFound} />
 ```
 
+# Ruta por defecto
+
+Para indicar cuál es la ruta por defecto - a la que se navegará si no se pone parte del path - usaremos `IndexRoute`. Para ello modificaremos el código un poco.
+
+```js
+import { 
+  Router, Route, IndexRoute, DefaultRoute
+  hashHistory, browserHistory, 
+  Link
+} from 'react-router';
+
+class App extends Component {
+  render () {
+    return (
+      <Router history={hashHistory}>
+        <Route path='/' component={Contenedor}>
+          <IndexRoute component={Oficina} />
+          <Route path='direccion' component={Direccion} />
+          <Route path='*' component={NotFound} />
+        </Route>
+      </Router>
+    )
+  }
+}
+
+const Nav = () => (
+  <div>
+    <Link to='/'>Oficina</Link>&nbsp;
+    <Link to='/direccion'>Oficina</Link>
+  </div>
+)
+
+const Container = (props) => (<div>
+  <Nav />
+  {props.children}
+</div>);
+
+const Oficina = () => <h1>Esta es una oficina</h1>
+const Direccion = () => <h1>Esta es la dirección</h1>
+const NotFound = () => (
+  <h1>
+    Ups!! Necesito un TomTom porque no encuentro la dirección 
+    que me pides. Solo encuentro un 404. ¿Tu sabes algo? 🙄
+  </h1>);
+
+export default App
+```
+
+## Enlaces de interés
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
 
