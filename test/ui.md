@@ -49,8 +49,37 @@ Vamos a utilizar de nuevo el componente de inicio de sesión anterior como un ej
 Tenemos pocas maneras de hacer este tipo de pruebas con React. La forma más sencilla es usar Enzyme.
 
 ##### Para usarlo
+Podemos usar Enzyme para simular interacciones escribiendo las especifiaciones usando Mocha o Jest.
 
-Podemos usar el addon de react-storybook instalándolo con `npm install -D storybook-addon-specifications` y escribiendo la especificación dentro de las historias
+```js
+class Foo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+  render() {
+    const { count } = this.state;
+    return (
+      <div>
+        <div className={`clicks-${count}`}>
+          {count} clicks
+        </div>
+        <a onClick={() => this.setState({ count: count + 1 })}>
+          Increment
+        </a>
+      </div>
+    );
+  }
+}
+
+const wrapper = mount(<Foo />);
+
+expect(wrapper.find('.clicks-0').length).to.equal(1);
+wrapper.find('a').simulate('click');
+expect(wrapper.find('.clicks-1').length).to.equal(1);
+```
+ 
+También podemos usar el addon de react-storybook instalándolo con `npm install -D storybook-addon-specifications` y escribiendo la especificación dentro de las historias
 
 ```js
 import { storiesOf } from '@kadira/storybook'
@@ -82,7 +111,7 @@ Se vería algo así
 
 ![](/assets/storybook-addon-specifications.png)
 
-## Tes de estilos
+## Test de estilos
 
 La interfaz de usuario tiene que ver con estilos (por muy feos que estos puedan ser, deben ser probados). Con las pruebas de estilo, estamos evaluando la apariencia de nuestros componentes de interfaz de usuario entre los cambios de código. Este es un tema bastante complejo y usualmente lo hacemos comparando imágenes.
 
@@ -92,3 +121,9 @@ Si estamos usando estilos en línea todo el camino, podemos usar los snapshosts 
 * PhantomCSS
 * Gemini
 * Happo
+
+
+
+
+**Más detellaes de cómo escribir historias con react-storybook**
+https://getstorybook.io/docs/react-storybook/basics/writing-stories
