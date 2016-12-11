@@ -72,10 +72,10 @@ describe('fetchData saga', function() {
     );
   });
 
-	// Test that our saga dispatches an action,
-	// without having to have the main application running!
-	it('should dispatch the dataLoaded action when the data has loaded', function() {
-		expect(sagaGenerator.next()).to.equal(put(dataLoaded()));
-	});
+  // Test that our saga dispatches an action,
+  // without having to have the main application running!
+  it('should dispatch the dataLoaded action when the data has loaded', function() {
+    expect(sagaGenerator.next()).to.equal(put(dataLoaded()));
+  });
 });
 ```
