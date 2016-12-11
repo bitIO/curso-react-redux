@@ -2,7 +2,7 @@
 
 ## Clases
 
-Vuelve a escribir estas dos tipos de objeto para utilizar la palabra clave `class`, en lugar de manipular el prototipo directamente. `Speaker` es un tipo simple que expone un método `speak` que, cuando se llama, registra el texto dado junto con el nombre del *speaker*. `Shouter` es un subtipo de Speaker que grita su texto y lo convierte en mayúsculas.
+Vuelve a escribir estas dos tipos de objeto para utilizar la palabra clave `class, en lugar de manipular el prototipo directamente. Speaker es un tipo simple que expone un método speak que, cuando se llama, registra el texto dado junto con el nombre del `_`speaker`_`. Shouter es un subtipo de Speaker que grita su texto y lo convierte en mayúsculas.`
 
 ```js
 function Speaker(name, verb) {
@@ -48,10 +48,16 @@ register.balance
 ```
 
 
+
+Vamos a probar con el reto de [_la torre de babel_](https://github.com/yosuke-furukawa/tower-of-babel)
+
+
+
 Más sitios donde aprender
 
-http://es6katas.org/
-https://babeljs.io/learn-es2015/
-http://stack.formidable.com/es6-interactive-guide/#/
-https://egghead.io/technologies/es6
-https://hacks.mozilla.org/category/es6-in-depth/
+[http://es6katas.org/](http://es6katas.org/)  
+[https://babeljs.io/learn-es2015/](https://babeljs.io/learn-es2015/)  
+[http://stack.formidable.com/es6-interactive-guide/\#/](http://stack.formidable.com/es6-interactive-guide/#/)  
+[https://egghead.io/technologies/es6](https://egghead.io/technologies/es6)  
+[https://hacks.mozilla.org/category/es6-in-depth/](https://hacks.mozilla.org/category/es6-in-depth/)
+

@@ -37,3 +37,12 @@ En antiguas versiones esto se permitia, ahora tenemos que pasar un string
 Habitualmente hacemos el _fecth_ de los datos cuando sabemos que el compoente se va a inicializar. ¿Qué pasa si se instancia ese componente 5 veces?
 
 Para evitar este tipo de situaciones, podemos usar el hook [onEnter de react-router](https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteConfiguration.md#enter-and-leave-hooks) para hacer el dispatch aquí. De esta manera, el componente se acerca más a un componente de presentación puro (stateless).
+
+#### Flujos de datos erróneos con Redux
+
+Es posible que lleguemos a usar alguna api que nos provea de datos y que caigamos en el error de _meter dichos datos_ directamente en nuestro estado en react o queramos meterlos al store. Pero debemos recordar que Redux debe ser nuestro SSOT.
+
+Por ejemplo, si usamos Firebase como fuente de datos, podemos usar `react-fire`. Pero este paquete va en contra de los flujos de datos en redux.
+
+![](/assets/Bad data flow.png)
+
