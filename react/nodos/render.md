@@ -10,6 +10,7 @@ var HTMLCustom = React.createElement('foo-bar', {className:'bar'}, 'foo');
 ReactDOM.render(HTMLLi, document.getElementById('existente'));
 ReactDOM.render(HTMLCustom, document.getElementById('custom'));
 ```
+
 ```html
 <body>
     <div id="existente"></div>
