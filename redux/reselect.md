@@ -79,3 +79,20 @@ const VisibleTodoList = connect(
 
 export default VisibleTodoList
 ```
+Si necesitasemos acceder a las propiedades dentro del selector, deberemos modificar la función `mapStateToProps` y los selectores
+
+```js
+const getVisibilityFilter = (state, props) =>
+  state.todoLists[props.listId].visibilityFilter
+
+const getTodos = (state, props) =>
+  state.todoLists[props.listId].todos
+
+// ...
+
+const mapStateToProps = (state, props) => {
+  return {
+    todos: getVisibleTodos(state, props)
+  }
+}
+```
