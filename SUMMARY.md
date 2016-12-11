@@ -45,6 +45,6 @@
   * [3.9 - reselect](redux/reselect.md)
   * [3.10 - Sub Aplicaciones](redux/subaplicaciones.md)
   * [3.11 - Routing](redux/routing.md)
- * [4.0 - Testing](test(README.md)
+ * [4.0 - Testing](test/README.md)
 
 
