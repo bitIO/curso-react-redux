@@ -283,3 +283,46 @@ describe('components', () => {
   })
 })
 ```
+
+## Middleware
+
+Para probar los middleware tenemos que _mockear_ la llamada del dispatch.
+
+```js
+import * as types from '../../constants/ActionTypes'
+import singleDispatch from '../../middleware/singleDispatch'
+
+const createFakeStore = fakeData => ({
+    getState() {
+        return fakeData
+    }
+})
+
+const dispatchWithStoreOf = (storeData, action) => {
+    let dispatched = null
+    const dispatch = 
+      singleDispatch(createFakeStore(storeData))(actionAttempt => dispatched = actionAttempt)
+    dispatch(action)
+    return dispatched
+}
+
+describe('middleware', () => {
+    it('should dispatch if store is empty', () => {
+        const action = {
+            type: types.ADD_TODO
+        }
+
+        expect(dispatchWithStoreOf({}, action)).toEqual(action)
+    })
+
+    it('should not dispatch if store already has type', () => {
+        const action = {
+            type: types.ADD_TODO
+        }
+
+        expect(dispatchWithStoreOf({
+            [types.ADD_TODO]: 'dispatched'
+        }, action)).toNotExist()
+    })
+})
+```
