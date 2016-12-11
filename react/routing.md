@@ -142,7 +142,7 @@ const About = (props) => (
 )
 ```
 
-La ruta para acceder sería `http://localhost:8100/#/about/drago`
+La ruta para acceder sería `http://localhost:8100/#/about/drago` pero si no ponemos un parámetro de nombre, obtendremos un 404.
 
 ## Enlaces de interés
 
