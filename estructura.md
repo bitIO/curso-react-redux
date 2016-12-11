@@ -58,6 +58,8 @@ Hay algunos beneficios interesantes en este enfoque:
 ## Directorio por vista
 
 ```
+├── index.jsx
+├── main.css
 └── views
     ├── Home
     │   ├── Home.jsx
@@ -71,3 +73,9 @@ Hay algunos beneficios interesantes en este enfoque:
     │   └── register_test.jsx
     └── index.js
 ```
+
+La idea es la misma que antes. La aplicación se inicia desde `index.jsx`, lo que activará las rutas que a su vez elige alguna vista para mostrar.
+
+Esta estructura puede escalar más, pero incluso tiene sus límites. Una vez que el proyecto comienza a crecer, es posible que deseemos introducir nuevos conceptos a la misma. Podría ser natural introducir un concepto, como "feature", entre las vistas y los componentes.
+
+Por ejemplo, es posible que tenga un LoginModal que se muestra en determinadas vistas si la sesión del usuario ha expirado. Se compone de componentes de nivel inferior. Una vez más, las características comunes podrían ser sacadas del propio proyecto en paquetes de sus propios como usted ve potencial para la reutilización.
