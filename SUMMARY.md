@@ -51,5 +51,6 @@
 * [5.0 - Despliegue](despliegue.md)
 * [Errores comunes](errores-comunes.md)
 * [Seeds](seeds.md)
+* [Estructurando un proyecto](estructura.md)
 
 
