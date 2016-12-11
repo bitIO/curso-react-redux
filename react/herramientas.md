@@ -11,4 +11,5 @@ La lista de requisitos será
 * [JSFiddle](https://jsfiddle.net/)
 * [Babel repl](https://babeljs.io/repl/)
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+* [Redux Developer Tool](https://github.com/gaearon/redux-devtools)
 
