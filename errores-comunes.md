@@ -1,2 +1,2 @@
-# Errores
+# Errores comunes
 
