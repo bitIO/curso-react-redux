@@ -21,3 +21,13 @@ export default function(state = [], action) {
   }
 }
 ```
+
+#### Render de JS objects en lugar de strings
+
+`Uncaught Error: Invariant Violation: Objects are not valid as a React child`
+
+En antiguas versiones esto se permitia, ahora tenemos que pasar un string
+
+```js
+<p>{{ color:blue, highlight: true }}</p>
+```
