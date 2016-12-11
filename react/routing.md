@@ -4,6 +4,7 @@ Lo que dicen en la documentación
 
 > React Router keeps your UI in sync with the URL. It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in. Make the URL your first thought, not an after-thought.
 
+## Añadir el router
 Creamos una apliación nueva y, cuando acabe de crearse ⌛️, instalamos el router.
 
 ```npm i -S react-router```
@@ -34,6 +35,8 @@ class App extends Component {
 }
 ```
 
+## Histórico
+
 Estamos usando `hashHistory` para el historial del navegación. Maneja el historial con la parte hash de la url. Añade ese extra para simular algunos comportamientos que el navegador tiene de forma nativa al usar urls reales. 
 Podemos cambiarlo por `browserHistory`. Cuando se utiliza el browserHistory debemos tener un servidor que siempre devolverá la aplicación en cualquier ruta; por ejemplo si usamos nodejs, una configuración como la siguiente funcionaría:
 
@@ -54,6 +57,11 @@ app.get('*', function (request, response){
 
 app.listen(port)
 ```
+
+# 404
+
+¿Qué pasa si llegamos a una ruta que no está definida? Vamos a configurar una ruta 404 y el componente que volverá si la ruta no se encuentra.
+
 
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
