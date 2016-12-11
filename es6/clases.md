@@ -46,7 +46,7 @@ var Poligono = class Poligono {
 };
 ```
 
-### Cuerpo de la clase y definición de métodosEDIT
+### Cuerpo de la clase y definición de métodos
 El cuerpo de una clase es la parte que se encuentra entre las llaves `{ }`. Este es el lugar donde se definen los miembros de clase, como los métodos o constructores.
 
 #### Modo estricto
