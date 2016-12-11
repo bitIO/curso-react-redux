@@ -47,11 +47,9 @@ register.deposit("00000")
 register.balance
 ```
 
-
-
 Vamos a probar con el reto de [_la torre de babel_](https://github.com/yosuke-furukawa/tower-of-babel)
 
-
+---
 
 Más sitios donde aprender
 
