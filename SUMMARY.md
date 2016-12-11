@@ -41,5 +41,6 @@
   * [3.7 - React](redux/react.md)
   * [3.8 - reselect](redux/reselect.md)
   * [3.9 - Sub Aplicaciones](redux/subaplicaciones.md)
+  * [3.10 - Routing](redux/routing.md)
 
 
