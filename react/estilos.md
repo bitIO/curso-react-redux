@@ -52,5 +52,31 @@ const styles = {
 
 ## CSS Modules
 
-CSS Modules parten de la premisa de que las reglas CSS deben ser locales por defecto. Si usted hace difícil utilizar globales, usted maneja solucionar el problema más grande de CSS. El enfoque todavía nos permite desarrollar CSS como hemos estado acostumbrados. Esta vez estamos operando en un contexto local más seguro, por defecto.
-Esto en sí resuelve una gran cantidad de problemas que las bibliotecas tratan de resolver en sus propias maneras. Si necesitamos estilos globales, todavía podemos obtenerlos. Aún así, es posible que desee tener algunos en torno a algunos de alto nivel de estilo, después de todo. Esta vez estamos siendo explícitos al respecto.
+CSS Modules parten de la premisa que las reglas CSS deben ser locales por defecto. Este enfoque nos permite desarrollar CSS como hemos estado haciéndolo.
+
+Esto resuelve una gran cantidad de problemas que otras bibliotecas tratan de resolver a su manera. Si necesitamos estilos globales, todavía podemos obtenerlos.
+
+**style.css**
+```css
+.primary { background: 'green'; }
+.warning { background: 'yellow'; }
+.button { padding: 1em; }
+.primaryButton { composes: primary button; }
+
+@media (max-width: 200px) {
+  .primaryButton {
+    composes: primary button;
+    width: 100%;
+  }
+}
+```
+
+**button.jsx**
+
+```js
+import styles from './style.css';
+...
+<button className=`${styles.primaryButton}`>Confirm</button>
+```
+
+**Referencia** http://survivejs.com/react/advanced-techniques/styling-react/
