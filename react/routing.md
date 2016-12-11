@@ -76,3 +76,4 @@ const NotFound = () => (
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
 
+https://medium.com/@dabit3/beginner-s-guide-to-react-router-53094349669#.1rus4v9j7
