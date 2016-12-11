@@ -40,9 +40,11 @@
   * [3.4 - Flujo](redux/flujo.md)
   * [3.5 - Middleware](redux/middleware.md)
   * [3.6 - Acciones asíncronas](redux/acciones-asincronas.md)
-  * [3.7 - React](redux/react.md)
-  * [3.8 - reselect](redux/reselect.md)
-  * [3.9 - Sub Aplicaciones](redux/subaplicaciones.md)
-  * [3.10 - Routing](redux/routing.md)
+  * [3.7 - Sagas](redux/sagas.md)
+  * [3.8 - React](redux/react.md)
+  * [3.9 - reselect](redux/reselect.md)
+  * [3.10 - Sub Aplicaciones](redux/subaplicaciones.md)
+  * [3.11 - Routing](redux/routing.md)
+  
 
 
