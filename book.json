@@ -1,8 +1,8 @@
 {
     "plugins": ["prism", "-highlight"],
-    "pluginsConfig": {  
+    "pluginsConfig": {
       "prism": {
-        "css": ["prismjs/themes/prism-okaidia.css"]
+        "css": ["prismjs/themes/prism-atom-dark.css"]
       }
     }
 }
