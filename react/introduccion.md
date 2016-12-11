@@ -63,7 +63,7 @@ Ejemplo de uso de web components (Polymer). Primero creamos un componente.
 
 añadiéndolo al documento actual, su uso sería
 
-```html
+```js
 <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible">
   <!-- home view -->
   <shop-home name="home" categories="[[categories]]"></shop-home>
