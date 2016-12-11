@@ -142,7 +142,11 @@ const About = (props) => (
 )
 ```
 
-La ruta para acceder sería `http://localhost:8100/#/about/drago` pero si no ponemos un parámetro de nombre, obtendremos un 404.
+La ruta para acceder sería `http://localhost:8100/#/about/drago` pero si no ponemos un parámetro de nombre, obtendremos un 404. Si queremos que el parámetro sea opcional lo pondremos entre paréntesis
+
+```js
+<Route path='/about/(:name)' component={About} />
+```
 
 ## Enlaces de interés
 
