@@ -16,13 +16,43 @@ import {
 } from 'react-router';
 ```
 
-Ahora vamos a añadir una ruta básica. Para ello, necesitamos declarar el contenedor de rutas y la ruta:
+Ahora vamos a añadir una ruta básica. Para ello, necesitamos declarar el contenedor de rutas y la ruta junto con los componentes asociados:
 
 ```js
-<Router history={hashHistory}>
-  <Route path='/' component={Home} />
-  <Route path='/address' component={Address} />
-</Router>
+const Oficina = () => <h1>Esta es una oficina</h1>
+const Direccion = () => <h1>Esta es la dirección</h1>
+
+class App extends Component {
+  render() {
+    return (
+      <Router history={hashHistory}>
+        <Route path='/' component={Oficina} />
+        <Route path='/direccion' component={Direccion} />
+      </Router>
+    )
+  }
+}
+```
+
+Estamos usando `hashHistory` para el historial del navegación. Maneja el historial con la parte hash de la url. Añade ese extra para simular algunos comportamientos que el navegador tiene de forma nativa al usar urls reales. 
+Podemos cambiarlo por `browserHistory`. Cuando se utiliza el browserHistory debemos tener un servidor que siempre devolverá la aplicación en cualquier ruta; por ejemplo si usamos nodejs, una configuración como la siguiente funcionaría:
+
+```js
+const express = require('express')
+const path = require('path')
+const port = process.env.PORT || 8080
+const app = express()
+
+// serve static assets normally
+app.use(express.static(__dirname + '/public'))
+
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
+
+app.listen(port)
 ```
 
 
