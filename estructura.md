@@ -33,9 +33,7 @@ Es una estructura _tradicional_ pero que, en cuanto el proyecto crezca un poco, 
 ## Directorio por componente
 
 ```
-├── actions
-│   ├── LaneActions.js
-│   └── NoteActions.js
+...
 ├── components
 │   ├── App
 │   │   ├── App.jsx
@@ -48,16 +46,4 @@ Es una estructura _tradicional_ pero que, en cuanto el proyecto crezca un poco, 
 │   │   ├── editable_test.jsx
 │   │   └── index.js
 ...
-│   └── index.js
-├── constants
-│   └── itemTypes.js
-├── index.jsx
-├── libs
-│   ├── alt.js
-│   ├── persist.js
-│   └── storage.js
-├── main.css
-└── stores
-    ├── LaneStore.js
-    └── NoteStore.js
 ```
