@@ -48,6 +48,40 @@ Vamos a utilizar de nuevo el componente de inicio de sesión anterior como un ej
 
 Tenemos pocas maneras de hacer este tipo de pruebas con React. La forma más sencilla es usar Enzyme.
 
+##### Para usarlo
+
+Podemos usar el addon de react-storybook instalándolo con `npm install -D storybook-addon-specifications` y escribiendo la especificación dentro de las historias
+
+```js
+import { storiesOf } from '@kadira/storybook'
+import { specs, describe, it } from 'storybook-addon-specifications'
+
+import {mount} from "enzyme";
+import expect from "expect";
+
+const stories = storiesOf('Button', module);
+
+stories.add('Hello World', function () {
+  const story =
+    <button onClick={action('Hello World')}>
+      Hello World
+    </button>;
+
+  specs(() => describe('Hello World', function () {
+    it('Should have the Hello World label', function () {
+      let output = mount(story);
+      expect(output.text()).toContain('Hello World');
+    });
+  }));
+
+  return story;
+});
+```
+
+Se vería algo así
+
+![](/assets/storybook-addon-specifications.png)
+
 ## Tes de estilos
 
 La interfaz de usuario tiene que ver con estilos (por muy feos que estos puedan ser, deben ser probados). Con las pruebas de estilo, estamos evaluando la apariencia de nuestros componentes de interfaz de usuario entre los cambios de código. Este es un tema bastante complejo y usualmente lo hacemos comparando imágenes.
