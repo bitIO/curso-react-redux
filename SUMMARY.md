@@ -33,7 +33,6 @@
    * [2.15 - Routing](react/routing.md)
    * [2.16 - Estilos](react/estilos.md)
    * [2.17 - Formularios](redux/formularios.md)
-   * [2.18 - Server side render](react/server-render.md)
 * [3.0 - Redux](redux/README.md)
   * [3.1 - Flux, los origenes](redux/flux.md)
   * [3.2 - Introducción](redux/introduccion.md)
