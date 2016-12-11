@@ -1,6 +1,6 @@
 # UI Testing
 
-Dado que React es _**sólo**_ una capa de vista, es importante asegurarse que esta es correcta. Para aseguranos de esto, usaremos 
+Dado que React es _**sólo**_ una capa de vista, es importante asegurarse que esta es correcta. Para aseguranos de esto, usaremos Storybook que nos proporciona diferentes tipos de test
 
 ## Test estructurales
 
@@ -16,6 +16,26 @@ Aquí nos enfocaremos en la estructura de la interfaz de usuario y en cómo est�
 * Una pantalla de error para mostrar errores.
 
 Para React, podemos usar `Enzyme` como una forma de hacer pruebas estructurales, pero ahora también podemos usar snapshots testing de `Jest` para hacer las cosas aún más simples.
+
+Con _snapshot testing_, mantenemos una copia de archivo de la estructura de los componentes de la interfaz de usuario. Luego, cuando hayamos completado los cambios en la interfaz de usuario, comparamos nuevas instantáneas con las instantáneas que guardamos en el archivo.
+
+Si las cosas no son las mismas, podemos hacer dos cosas:
+
+* Podemos considerar nuevas instantáneas que muestren el estado actual y luego actualizarlas como nuevas instantáneas.
+* Podemos encontrar la causa raíz del cambio y arreglar nuestro código.
+
+##### Para usarlo
+
+Instalar con `npm i -D @kadira/storyshots` y añadir al `package.json`
+la siguiente linea dentro de la sección de scripts `"test-storybook": "storyshots"`. Ya podemos ejecutarlos con `npm run test-storybook`
+
+La primera vez guardará los _snapshots_
+
+![](/assets/storyshots-first-run.png)
+
+La siguiente vez, si hemos cambiado algo veremos una pantalla como esta
+
+![](/assets/storyshots-diff-view.png)
 
 ## Test de interacción
 
