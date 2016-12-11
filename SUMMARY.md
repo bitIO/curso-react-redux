@@ -50,5 +50,6 @@
   * [4.2 - Redux](test/redux.md)
 * [5.0 - Despliegue](despliegue.md)
 * [Errores comunes](errores-comunes.md)
+* [Seeds](seeds.md)
 
 
