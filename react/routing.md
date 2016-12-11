@@ -125,6 +125,7 @@ export default App
 
 # Parámetros
 
+### Parámetros de ruta
 Digamos que tenemos esta ruta
 
 ```js
@@ -148,8 +149,11 @@ La ruta para acceder sería `http://localhost:8100/#/about/drago` pero si no pon
 <Route path='/about/(:name)' component={About} />
 ```
 
+### Querystring
+
+Acceder a los parámetros que vienen en el querystring no es mucho más complicado. Supongamos que viene un parámetro llamado `refOf`. Acceder a él sería, otra vez, a través de props de la siguiente manera: `props.location.refOf`.
+
+
 ## Enlaces de interés
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
-
-https://medium.com/@dabit3/beginner-s-guide-to-react-router-53094349669#.1rus4v9j7
