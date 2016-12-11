@@ -62,6 +62,16 @@ app.listen(port)
 
 ¿Qué pasa si llegamos a una ruta que no está definida? Vamos a configurar una ruta 404 y el componente que volverá si la ruta no se encuentra.
 
+```js
+const NotFound = () => (
+  <h1>
+    Ups!! Necesito un TomTom porque no encuentro la dirección 
+    que me pides. Solo encuentro un 404. ¿Tu sabes algo? 🙄
+  </h1>);
+
+// y dentro del Router añadimos
+<Route path='*' component={NotFound} />
+```
 
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
