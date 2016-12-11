@@ -1,6 +1,6 @@
 # Renderizando los nodos en el DOM
 
-React proporciona la función `ReactDOM.render()` del paquete `react-dom` que se utiliza para procesar los nodos React en el DOM.
+React proporciona la función `ReactDOM.render()` del paquete `react-dom` que se utiliza para, oh sorpresa, procesar los nodos React en el DOM.
 
 Vamos a crear dos elementos, uno que representa un tag HTMl existente y uno no existente, y los renderizamos en el HTML existente.
 
