@@ -59,3 +59,22 @@ function mapStateToProps(state, ownProps) {
   };
 }
 ```
+
+##### Eventos de navegación a través de acciones Redux
+
+Un middleware. 
+
+```js
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { routerMiddleware, push } from 'react-router-redux'
+
+// Apply the middleware to the store
+const middleware = routerMiddleware(browserHistory)
+const store = createStore(
+  reducers,
+  applyMiddleware(middleware)
+)
+
+// Dispatch from anywhere like normal.
+store.dispatch(push('/foo'))
+```
