@@ -2,7 +2,7 @@
 
 A la hora de empezar un proyecto, siempre nos viene la duda de cómo estructurarlo. La experiencia nos dirá la mejor manera para nosotros, pero mientras tanto, podemos hacer uso de algunos starter kits disponibles.
 
-* [craete-react-app](https://github.com/facebookincubator/create-react-app)
+* [craete-react-app](https://github.com/facebookincubator/create-react-app) - [guia de uso](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
 * [reactboilerplate](http://reactboilerplate.com/)
 * [electrode](https://medium.com/walmartlabs/introducing-electrode-an-open-source-release-from-walmartlabs-14b836135319#.tg3d9mxez)
 * ... y la lista continua hasta el infinito
