@@ -201,3 +201,41 @@ describe('todos reducer', () => {
   })
 })
 ```
+
+## Probar un componente
+
+Consideremos el siguente componente
+
+```js
+import React, { PropTypes, Component } from 'react'
+import TodoTextInput from './TodoTextInput'
+
+class Header extends Component {
+  handleSave(text) {
+    if (text.length !== 0) {
+      this.props.addTodo(text)
+    }
+  }
+
+  render() {
+    return (
+      <header className='header'>
+          <h1>todos</h1>
+          <TodoTextInput 
+            newTodo={true}
+            onSave={this.handleSave.bind(this)}
+            placeholder='What needs to be done?'
+          />
+      </header>
+    )
+  }
+}
+
+Header.propTypes = {
+  addTodo: PropTypes.func.isRequired
+}
+
+export default Header
+```
+
+Para probar los componentes hacemos un ayudante de setup () que pasa las devoluciones de llamada rechazadas como apoyos y renderiza el componente con renderizado superficial. Esto permite que las pruebas individuales afirmen si las llamadas se llamaron cuando se esperaba.
