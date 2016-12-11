@@ -31,6 +31,7 @@
    * [2.13 - ¡¡¡ Examen !!! 🤔](react/questionario.md)
    * [2.14 - Ejercicios](react/ejercicios.md)
    * [2.15 - Routing](react/routing.md)
+   * [2.16 - Estilos](react/estilos.md)
 * [3.0 - Redux](redux/README.md)
   * [3.1 - Flux, los origenes](redux/flux.md)
   * [3.2 - Introducción](redux/introduccion.md)
