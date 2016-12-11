@@ -5,7 +5,7 @@
     ],
     "pluginsConfig": {
       "prism": {
-        "css": ["./prismjs/themes/prism-atom-dark.css"]
+        "css": ["../prismjs/themes/prism-atom-dark.css"]
       }
     }
 }
