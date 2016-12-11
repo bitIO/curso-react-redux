@@ -81,3 +81,5 @@ describe('fetchData saga', function() {
 ```
 
 Recuerda que los generadores de Esnext no pasan la palabra clave yield hasta que se llama a `generator.next()`, momento en el que ejecutan la función, hasta que encuentran la siguiente palabra clave yield. Mediante el uso de los efectos redux-saga, podemos probar fácilmente cosas asíncronas sin necesidad de mockear nada y sin necesidad de red para nuestras pruebas.
+
+[Veamos el ejemplo de la documentación](https://github.com/yelouafi/redux-saga/)
