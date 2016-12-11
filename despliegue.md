@@ -6,3 +6,21 @@ Lo primero que tenemos que tener en cuenta es que tendremos dos _pipelines_. Una
 
 ![](/assets/Lineas de desarrollo.png)
 
+
+## Usando create-react-app
+
+Heroku tiene ya implementado el proceso de despliegue para aplicaciones creadas usando `create-react-app`.
+
+El proceso sería
+
+```
+npm install -g create-react-app
+create-react-app my-app
+cd my-app
+git init
+heroku create -b https://github.com/mars/create-react-app-buildpack.git
+git add .
+git commit -m "react-create-app on Heroku"
+git push heroku master
+heroku open
+```
