@@ -121,6 +121,29 @@ const NotFound = () => (
 export default App
 ```
 
+**Nota: ** Puede haber múltiples `IndexRoute`.
+
+# Parámetros
+
+Digamos que tenemos esta ruta
+
+```js
+<Route path='/about/:name' component={About} />
+```
+
+Para acceder a los parámetros de la ruta, simplemente accedemos a ellos a través de `props.params'.
+
+```js
+const About = (props) => (
+  <div>
+    <h3>Welcome to the About Page</h3>
+    <h2>{props.params.name}</h2>
+  </div>
+)
+```
+
+La ruta para acceder sería `http://localhost:8100/#/about/drago`
+
 ## Enlaces de interés
 
 [https://github.com/reactjs/react-router-tutorial](https://github.com/reactjs/react-router-tutorial)
