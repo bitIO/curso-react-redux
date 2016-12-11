@@ -45,3 +45,17 @@ ReactDOM.render(
 const history = syncHistoryWithStore(browserHistory, store)
 history.listen(location => analyticsService.track(location.pathname))
 ```
+
+
+##### ¿Cómo puedo acceder al estado del enrutador en un componente de contenedor?
+
+Cuando usamos `mapStateToPros` podemos usar [el segundo parámetro llamado `ownProps`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) para acceder a las propiedades del router.
+
+```js
+function mapStateToProps(state, ownProps) {
+  return {
+    id: ownProps.params.id,
+    filter: ownProps.location.query.filter
+  };
+}
+```
