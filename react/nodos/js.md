@@ -93,7 +93,7 @@ var reactNodeLi = React.createElement('li',
 * El atributo de clase debe escribirse className
 * El atributo for debe escribirse htmlFor
 * El atributo `style` a de ser un objeto con las propiedades en _camel case_.
-* Los elementos de formulario HTML (por ejemplo, <input />, <textarea />, etc.) creados como nodos React admiten algunos atributos que son afectados por la interacción del usuario (value, checked, selected).
+* Los elementos de formulario HTML (por ejemplo, `<input />`, `<textarea />`, etc.) creados como nodos React admiten algunos atributos que son afectados por la interacción del usuario (value, checked, selected).
 * Los atributos `ref` y `dangerouslySetInnerHTML` - que no existen en DOM - son de uso para acceder a un nodo y para ...
 * Todos los atributos son camel case (por ejemplo, accept-charset se escribe como acceptCharset) que difiere de cómo se escriben en HTML.
 
