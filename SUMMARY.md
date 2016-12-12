@@ -34,7 +34,6 @@
   * [2.14 - Ejercicios](react/ejercicios.md)
   * [2.15 - Routing](react/routing.md)
   * [2.16 - Estilos](react/estilos.md)
-  * [2.17 - Formularios](redux/formularios.md)
 
 * [3.0 - Redux](redux/README.md)
   * [3.1 - Flux, los origenes](redux/flux.md)
@@ -48,6 +47,7 @@
   * [3.9 - reselect](redux/reselect.md)
   * [3.10 - Sub Aplicaciones](redux/subaplicaciones.md)
   * [3.11 - Routing](redux/routing.md)
+  * [3.12 - Formularios](redux/formularios.md)
 
 * [4.0 - Testing](test/README.md)
   * [4.1 - UI Testing](test/ui.md)
