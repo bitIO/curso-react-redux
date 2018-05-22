@@ -39,11 +39,11 @@ const nav = React.createElement(
 No pienses en JSX como una plantilla, sino como una sintaxis JS especial que tiene que ser compilada. Para ello, usamos Babel - que es una [selección subjetiva del equipo React](https://facebook.github.io/react/blog/2015/09/10/react-v0.14-rc1.html#compiler-optimizations) para transformar el código ES\* y la sintaxis JSX al código ES5.
 
 Por qué Facebook cree que JSX merece la pena:
-* Las personas menos técnicas todavía pueden entender y modificar las partes requeridas. Los desarrolladores y diseñadores de CSS encontrarán JSX más familiar que JavaScript puro. 
+* Las personas menos técnicas todavía pueden entender y modificar las partes requeridas. Los desarrolladores y diseñadores de CSS encontrarán JSX más familiar que JavaScript puro.
 * Puede aprovechar toda la potencia de JavaScript en HTML y evitar el aprendizaje o el uso de un lenguaje de plantillas. JSX no es una solución de plantillas. Es una sintaxis declarativa utilizada para expresar una estructura de árbol de nodos y componentes de interfaz de usuario.
 * Al agregar un paso de transformación de JSX, encontrarás errores en tu HTML que de otra forma te perderías.
 * JSX promueve la idea de estilos en línea. Que puede ser una buena cosa (o no).
-* JSX es algo separado de React que no intenta cumplir con ninguna especificación XML o HTML. JSX está diseñado como una característica ECMAScript y la similitud con XML/HTML es sólo superficial (es decir, se ve como XML/HTML para que pueda escribir algo familiar). 
+* JSX es algo separado de React que no intenta cumplir con ninguna especificación XML o HTML. JSX está diseñado como una característica ECMAScript y la similitud con XML/HTML es sólo superficial (es decir, se ve como XML/HTML para que pueda escribir algo familiar).
 * Actualmente [se está escribiendo una especificación de JSX](https://facebook.github.io/jsx/) para ser utilizada por cualquiera como una extensión de sintaxis similar a XML a ECMAScript sin ninguna semántica definida.
 
 Recuerda que en JSX, `<div />` es válido mientras que `<div>` solo no lo es. **Tienes que cerrar todas las etiquetas, siempre**.
@@ -53,7 +53,7 @@ Más sobre Babel en [http://babeljs.io/](http://babeljs.io/) o en el [manual de 
 **Recordatorio**
 
 * Las etiquetas JSX admiten la sintaxis de cierre automático de XML, por lo que, opcionalmente, se puede dejar la etiqueta de cierre desactivada.
-* Si pasamos atributos a elementos HTML nativos que no existen en la especificación HTML, React no los renderizará al DOM actual. Sin embargo, si utiliza un elemento personalizado (es decir, no un elemento HTML de soporte), los atributos personalizados se agregarán a elementos personalizados (<drago-component custom-attribute = "foo" />).
+* Si pasamos atributos a elementos HTML nativos que no existen en la especificación HTML, React no los renderizará al DOM actual. Sin embargo, si utiliza un elemento personalizado (es decir, no un elemento HTML de soporte), los atributos personalizados se agregarán a elementos personalizados (<bitio-component custom-attribute = "foo" />).
 * El atributo de `class` debe escribirse `className`
 * El atributo `for` debe escribirse `htmlFor`
 * El atributo de `style` toma un objeto de propiedades - en camel case.
@@ -82,26 +82,26 @@ const reactNodeLi = React.createElement('li',
 );
 ```
 que producía este html
- 
+
  ```html
  <li id="li1" data-test="test" class="blue" aria-test="test" style="background-color:red;" data-reactid=".0">texto</li>
  ```
- 
+
  En JSX lo definiríamos de la siguiente manera
- 
+
  ```js
-const reactNodeLi = 
+const reactNodeLi =
   <li ariaTest="test" className="blue" dataTest="test" style={{ backgroundColor: 'red' }}>
     texto
   </li>
  ```
- 
+
  y, una vez transpilado, se convertiría al JS que ya conocemos
- 
+
  ```js
  var reactNodeLi = React.createElement(
     'li',
-    { 
+    {
       'data-test': 'test',
       className: 'blue',
       'aria-test': 'test',
@@ -149,7 +149,7 @@ Para ello debermos hacer uso de `{ }` que nos permitirá hacer uso de
 
 * expresiones y condiciones
 * referencias a otros elementos JS que esten en el _scope_
-* comentarios 
+* comentarios
 
 ```js
 const label = '2 + 2';
@@ -158,7 +158,7 @@ const reactNode = <label>{label} = <input type={inputType} value={2+2} /></label
 ReactDOM.render(reactNode, document.getElementById('app'));
 ```
 
-Se transforma en 
+Se transforma en
 
 ```js
 var label = '2 + 2';
@@ -184,7 +184,7 @@ const reactNode = <div /*commentado*/>
  </div>;
 ```
 
-De no haber usado `{ }` para escapar los comentarios, el resultado podría haber sido 
+De no haber usado `{ }` para escapar los comentarios, el resultado podría haber sido
 
 ```js
 var reactNode = React.createElement(

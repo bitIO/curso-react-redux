@@ -80,7 +80,7 @@ var reactNodeLi = React.createElement('li',
 );
 ```
  el resultado sería
- 
+
  ```html
  <li id="li1" data-test="test" class="blue" aria-test="test" style="background-color:red;" data-reactid=".0">text</li>
  ```
@@ -89,7 +89,7 @@ var reactNodeLi = React.createElement('li',
 
 * Dejar un atributo vacio lo convierte en `true` (id="" se convierte en id="true")
 * Si un propiedad se duplica, el último definido gana.
-* Si pasa atributos a elementos HTML nativos que no existen en la especificación HTML, React no los procesará. Sin embargo, si utiliza un elemento personalizado (es decir, no un elemento HTML estándar), los atributos personalizados se agregarán a elementos personalizados (por ejemplo, <drago-component custom-attribute = "foo" />).
+* Si pasa atributos a elementos HTML nativos que no existen en la especificación HTML, React no los procesará. Sin embargo, si utiliza un elemento personalizado (es decir, no un elemento HTML estándar), los atributos personalizados se agregarán a elementos personalizados (por ejemplo, <bitio-component custom-attribute = "foo" />).
 * El atributo de clase debe escribirse className
 * El atributo for debe escribirse htmlFor
 * El atributo `style` a de ser un objeto con las propiedades en _camel case_.
@@ -117,7 +117,7 @@ summary tabIndex target title type useMap value width wmode wrap
 
 ### Factorias
 
-React proporciona una forma para crear nodos de elementos HTML comúnmente utilizados: las factorias. Estas son simplemente funciones que generan un `ReactElement`. Si usamos `JSX`es bastante probable que jamás usemos las factorias. 
+React proporciona una forma para crear nodos de elementos HTML comúnmente utilizados: las factorias. Estas son simplemente funciones que generan un `ReactElement`. Si usamos `JSX`es bastante probable que jamás usemos las factorias.
 React también proporciona una forma de crear factorías propias por medio de `React.createFactory(type)`.
 
 ```js
@@ -158,7 +158,7 @@ const reactNode = React.createElement(
 ReactDOM.render(reactNode, document.getElementById('app'));
 ```
 
-Cada instancia de `SyntheticEvent` tiene las siguientes propriedades 
+Cada instancia de `SyntheticEvent` tiene las siguientes propriedades
 ```
 bubbles
 cancelable

@@ -12,8 +12,8 @@ Creamos una apliación nueva y, cuando acabe de crearse ⌛️, instalamos el ro
 e importamos en nuestro App.js
 
 ```js
-import { 
-  Router, Route, Link, IndexRoute, hashHistory, browserHistory 
+import {
+  Router, Route, Link, IndexRoute, hashHistory, browserHistory
 } from 'react-router';
 ```
 
@@ -37,7 +37,7 @@ class App extends Component {
 
 ## Histórico
 
-Estamos usando `hashHistory` para el historial del navegación. Maneja el historial con la parte hash de la url. Añade ese extra para simular algunos comportamientos que el navegador tiene de forma nativa al usar urls reales. 
+Estamos usando `hashHistory` para el historial del navegación. Maneja el historial con la parte hash de la url. Añade ese extra para simular algunos comportamientos que el navegador tiene de forma nativa al usar urls reales.
 Podemos cambiarlo por `browserHistory`. Cuando se utiliza el browserHistory debemos tener un servidor que siempre devolverá la aplicación en cualquier ruta; por ejemplo si usamos nodejs, una configuración como la siguiente funcionaría:
 
 ```js
@@ -65,7 +65,7 @@ app.listen(port)
 ```js
 const NotFound = () => (
   <h1>
-    Ups!! Necesito un TomTom porque no encuentro la dirección 
+    Ups!! Necesito un TomTom porque no encuentro la dirección
     que me pides. Solo encuentro un 404. ¿Tu sabes algo? 🙄
   </h1>);
 
@@ -78,9 +78,9 @@ const NotFound = () => (
 Para indicar cuál es la ruta por defecto - a la que se navegará si no se pone parte del path - usaremos `IndexRoute`. Para ello modificaremos el código un poco.
 
 ```js
-import { 
+import {
   Router, Route, IndexRoute, DefaultRoute
-  hashHistory, browserHistory, 
+  hashHistory, browserHistory,
   Link
 } from 'react-router';
 
@@ -114,7 +114,7 @@ const Oficina = () => <h1>Esta es una oficina</h1>
 const Direccion = () => <h1>Esta es la dirección</h1>
 const NotFound = () => (
   <h1>
-    Ups!! Necesito un TomTom porque no encuentro la dirección 
+    Ups!! Necesito un TomTom porque no encuentro la dirección
     que me pides. Solo encuentro un 404. ¿Tu sabes algo? 🙄
   </h1>);
 
@@ -143,7 +143,7 @@ const About = (props) => (
 )
 ```
 
-La ruta para acceder sería `http://localhost:8100/#/about/drago` pero si no ponemos un parámetro de nombre, obtendremos un 404. Si queremos que el parámetro sea opcional lo pondremos entre paréntesis
+La ruta para acceder sería `http://localhost:8100/#/about/bitio` pero si no ponemos un parámetro de nombre, obtendremos un 404. Si queremos que el parámetro sea opcional lo pondremos entre paréntesis
 
 ```js
 <Route path='/about/(:name)' component={About} />
