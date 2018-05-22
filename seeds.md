@@ -8,3 +8,4 @@ A la hora de empezar un proyecto, siempre nos viene la duda de cómo estructurar
 * ... y la lista continua hasta el infinito
 
 La mejor lista con los proyectos boilerplate que podemos usar es [esta](http://andrewhfarmer.com/starter-project/). nos permite filtrar por las carácterísticas que necesitamos y así elegir mejor.
+
