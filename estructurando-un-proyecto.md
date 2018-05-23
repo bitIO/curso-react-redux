@@ -2,6 +2,10 @@
 
 React no impone ninguna estructura de proyecto en particular. Lo bueno de esto es que permite hacer una estructura para satisfacer nuestras necesidades. Lo malo es que no es posible proporcionar una estructura ideal que funcione para cada proyecto.
 
+Sin embargo, existen una serie de starter kits que nos ayudan a la hora de generar un nuevo proyecto. En esta página [https://www.javascriptstuff.com/react-starter-projects/](https://www.javascriptstuff.com/react-starter-projects/) podéis encontrar multiples opciones. Mi opción preferida, es [reactboilerplate](https://github.com/react-boilerplate/react-boilerplate).
+
+Si prefieres hacerlo a mano, por lo que sea 😛, puedes seguir estos _patrones_
+
 ## Directorio por concepto
 
 ```text
